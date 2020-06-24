@@ -20,7 +20,12 @@
     "prod": "npm run build && npm run serve",
     "build": "npm run clean && cross-env NODE_ENV=production webpack",
     "serve": "cross-env NODE_ENV=production nodemon --exec babel-node backend/server.js",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "keywords": [],
   "author": "",
@@ -40,6 +45,7 @@
     "@babel/register": "^7.10.3",
     "@babel/runtime": "^7.10.3",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
@@ -47,18 +53,13 @@
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.3.1",
     "eslint-config-airbnb-typescript": "^8.0.2",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "img-loader": "^3.0.1",
     "jest": "^26.1.0",
     "jest-dom": "^4.0.0",
-    "prettier": "^2.0.5",
+    "lint-staged": "^10.2.11",
     "react-testing-library": "^8.0.1",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
@@ -94,6 +95,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
     "progress-bar-webpack-plugin": "^2.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
