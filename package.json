@@ -20,12 +20,17 @@
     "prod": "npm run build && npm run serve",
     "build": "npm run clean && cross-env NODE_ENV=production webpack",
     "serve": "cross-env NODE_ENV=production nodemon --exec babel-node backend/server.js",
-    "lint": "eslint . --ext .tsx"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -53,6 +58,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.3.1",
     "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-plugin-react": "^7.20.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
@@ -86,6 +92,8 @@
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.8.0",
     "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "express": "^4.17.1",
     "fork-ts-checker-webpack-plugin": "^5.0.4",
     "mini-css-extract-plugin": "^0.9.0",
