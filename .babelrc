@@ -1,12 +1,13 @@
 {
     "presets": [
         [
-            "@babel/preset-env",
+            "@babel/preset-env", // @babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms
             {
                 "useBuiltIns": "entry"
             }
         ],
-        "@babel/preset-react"
+        "@babel/preset-react",
+        "@babel/preset-typescript"
     ],
     "plugins": [
         "@babel/plugin-proposal-object-rest-spread",
