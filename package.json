@@ -20,7 +20,10 @@
     "prod": "npm run build && npm run serve",
     "build": "npm run clean && cross-env NODE_ENV=production webpack",
     "serve": "cross-env NODE_ENV=production nodemon --exec babel-node backend/server.js",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "jest",
+    "test:watch": "npm run test --watch",
+    "test:cover": "npm run test --coverage"
   },
   "husky": {
     "hooks": {
