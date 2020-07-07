@@ -5,7 +5,6 @@ import DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plu
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressBarWebpackPlugin from 'progress-bar-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 import paths from './paths';
 import rules from './rules';
@@ -42,14 +41,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Boilerplate',
       template: paths.templatePath,
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'frontend/public',
-          // ignore: ['index.html'],
-        },
-      ],
     }),
   ],
 };
