@@ -39,8 +39,15 @@ module.exports = {
     new ForkTsCheckerWebpackPlugin(),
     // Generate html file to dist folder
     new HtmlWebpackPlugin({
-      title: 'Boilerplate',
       template: paths.templatePath,
+      minify: {
+        collapseInlineTagWhitespace: true,
+        collapseWhitespace: true,
+        preserveLineBreaks: true,
+        minifyURLs: true,
+        removeComments: true,
+        removeAttributeQuotes: true,
+      },
     }),
   ],
 };
