@@ -1,5 +1,5 @@
 {
-  "compileOnSave": false, // Signals to the IDE to generate all files for a given tsconfig.json upon saving.
+  "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "frontend/src",
     "target": "es6",
