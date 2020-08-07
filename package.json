@@ -20,7 +20,7 @@
     "tslint": "tslint -t codeFrame -c tslint.json \"**/*.tsx\" \"**/*.d.ts\"",
     "stylelint": "stylelint \"**/*.css **/*.sass **/*.scss\"",
     "lint": "yarn eslint && yarn tslint && yarn stylelint",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand --passWithNoTests"
   },
   "husky": {
     "hooks": {
