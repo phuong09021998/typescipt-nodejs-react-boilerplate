@@ -20,8 +20,7 @@
     "tslint": "tslint -t codeFrame -c tslint.json \"**/*.tsx\" \"**/*.d.ts\"",
     "stylelint": "stylelint \"**/*.css **/*.sass **/*.scss\"",
     "lint": "yarn eslint && yarn tslint && yarn stylelint",
-    "test": "jest --runInBand --coverage",
-    "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "test": "jest --runInBand"
   },
   "husky": {
     "hooks": {
